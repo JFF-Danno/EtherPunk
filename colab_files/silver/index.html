@@ -1,0 +1,74 @@
+<html>
+<head>
+
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./abiStake.js"></script>
+    <script type="text/javascript" src="./abiFactory.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <link rel="stylesheet" href="main.css">
+
+<script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js" type="text/javascript"></script>
+</head>
+<body style="padding:20px;">
+    
+    <table width="100%"><tr><td>
+    <img src="/matic/matic.png" style="float:left;padding-right:20px; width:500px;" />
+<p>Hi welcome to Silver Squeeze Stake Betting</p>
+<p>First thing you need to try this out is setup your metamask wallet for the matic test net <a target="_blank" href="https://docs.matic.network/docs/develop/metamask/testnet/">click here!</a></p>
+<p>Then you'll need some funds from the faucet <a target="_blank" href="https://faucet.matic.network/">click here!</a></p>
+<p><h3>The Rules</h3>
+<ul>
+<li>Stake against the price range of your choosing.</li>
+<li>10% is paid into the prize pool.</li>
+<li>The amount you stake is fixed for now but you can stake as many times as you wish. (but staking more resets your rewards period currently)</li>
+<li>When ever the silver price pings on your price range you'll recieve rewards.</li>
+<li>There is no fee for leaving the stake. (good luck, it straight out doesnt work right yet.)</li>
+<li>The amount of rewards to be paid per ping needs thought. It's an arbitrarily low figure for now.</li>
+</ul>
+</p>
+</td>
+</tr>
+
+<tr>
+    <td>
+       <hr>
+    </td>
+</tr>
+<tr>
+  <td>
+<h1 id="price">Are you connected to Matic's Mumbai Testnet? Instructions are above ^^^^^</h1>
+<h1 id="prizepool">Total Prize Pool </h1></td>
+        </tr><tr><td>
+<div id="panels"></div>
+            </td>  </tr><tr><td>
+    
+<div style="float:left;" >
+
+    <button  onclick="AddToStake( 0 );" >Add to stake under $25</button>  |  
+<button  onclick="AddToStake( 1 );" >Add to stake $25 to $30</button>  |  
+<button onclick="AddToStake( 2 );" >Add to stake $30 to $40</button>  |  
+<button  onclick="AddToStake( 3 );" >Add to stake $40 to $50</button>  |  
+<button  onclick="AddToStake( 4 );" >Add to stake over $50 </button><br><br>
+
+
+<button  onclick="RemoveStake( 0 );" >Remove stake under $25</button>  |  
+<button  onclick="RemoveStake( 1 );" >Remove stake $25 to $30</button>  |  
+<button onclick="RemoveStake( 2 );" >Remove stake $30 to $40</button>  |  
+<button  onclick="RemoveStake( 3 );" >Remove stake $40 to $50</button>  |  
+<button  onclick="RemoveStake( 4 );" >Remove stake over $50 </button>
+
+</div></td></tr><tr><td>
+
+ <div id="info" style="float:left;" >
+    <h2>Stake Betting, what's it about?</h2>
+    <p>It's a gamified staking rewards system.</p>
+    <p>What's the plan? Explore and develop ways to implement betting dapps with minimal fuss.</p>
+    <p>Looking at <a target="_blank" href="https://moralis.io/" >moralis.io</a> and any other libraries that can allow the developer to focus on the frontend.</p>
+    <p>There's plenty more to add to the plan.... But this is beat it into shape mode.</p>
+ </div></td></tr>
+</table>
+
+</body>
+
+</html>
