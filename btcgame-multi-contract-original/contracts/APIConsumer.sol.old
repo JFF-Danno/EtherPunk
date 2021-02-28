@@ -1,0 +1,68 @@
+pragma solidity ^0.5.11;
+
+import "@chainlink/contracts/contracts/v0.5/ChainlinkClient.sol";
+
+contract APIConsumer is ChainlinkClient {
+  
+    uint256 public ethereumPrice;
+    
+    address private oracle;
+    bytes32 private jobId;
+    uint256 private fee;
+    
+    /**
+     * Network: Matic Mumbai Testnet
+     * Oracle: 0x1cf7D49BE7e0c6AC30dEd720623490B64F572E17
+     * Job ID: d8fcf41ee8984d3b8b0eae7b74eca7dd
+     * LINK address: 0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB
+     * Fee: 1 LINK
+     */
+    constructor() public {
+        setChainlinkToken(0x70d1F773A9f81C852087B77F6Ae6d3032B02D2AB);
+        oracle = 0x1cf7D49BE7e0c6AC30dEd720623490B64F572E17;
+        jobId = "d8fcf41ee8984d3b8b0eae7b74eca7dd";
+        fee = 10 ** 18; // 1 LINK
+    }
+    
+    function getPrice() public view returns (uint256)
+    {
+        return ethereumPrice;        
+    }
+
+ 
+    function fundContract() payable public 
+    {
+        
+    }
+
+
+    /**
+     * Create a Chainlink request to retrieve API response, find the target price
+     * data, then multiply by 100 (to remove decimal places from price).
+     */
+    function requestBTCPrice() payable public 
+    {
+        Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
+        
+        // Set the URL to perform the GET request on
+        request.add("get", "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD");
+        
+        // Set the path to find the desired data in the API response, where the response format is:
+        // {"USD":243.33}
+        request.add("path", "USD");
+        
+        // Multiply the result by 100 to remove decimals
+        request.addInt("times", 100);
+        
+        // Sends the request
+        sendChainlinkRequestTo(oracle, request, fee);
+    }
+    
+    /**
+     * Receive the response in the form of uint256
+     */ 
+    function fulfill(bytes32 _requestId, uint256 _price) public recordChainlinkFulfillment(_requestId)
+    {
+        ethereumPrice = _price;
+    }
+}

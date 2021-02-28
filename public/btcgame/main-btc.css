@@ -1,0 +1,46 @@
+
+
+#gamerow table
+{
+    width: 100%;
+    border: 1px solid;
+    height: 350px;
+}
+
+#gamerow td
+{
+    width: 20%;
+    border: 1px solid;
+}
+
+
+#gamerow h4
+{
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+
+#stakers21,#stakers22,#stakers23,#stakers24,#stakers25,#staked21,#staked22,#staked23,#staked24,#staked25,#mystake21,#mystake22,#mystake23,#mystake24,#mystake25,#rewards21,#rewards22,#rewards23,#rewards24,#rewards25
+{
+    color: white;
+    position: relative;
+    top: -35px;
+    font-size: 18px;
+}
+
+
+
+li
+{
+    list-style: none;
+    text-align: left;
+}
+
+.name
+{
+    color: white;
+    position: relative;
+    top: -53px;
+}
+

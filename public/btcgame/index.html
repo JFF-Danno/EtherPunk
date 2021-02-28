@@ -1,0 +1,57 @@
+<html>
+<head>
+
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./abiStake.js"></script>
+    <script type="text/javascript" src="./abiFactory.js"></script>
+    <script type="text/javascript" src="./abiPriceFeed.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <link rel="stylesheet" href="main.css">
+
+<script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js" type="text/javascript"></script>
+</head>
+<body style="padding:20px;">
+    <table><tr><td>
+    <img src="/matic/matic.png" style="float:left;padding-right:20px; width:500px;" />
+<p>Hi welcome to Stake Trading.</p>
+<p>First thing you need to try this out is setup your metamask wallet for the matic test net <a target="_blank" href="https://docs.matic.network/docs/develop/metamask/testnet/">click here!</a></p>
+<p>Then you'll need some funds from the faucet <a target="_blank" href="https://faucet.matic.network/">click here!</a></p>
+            </td></tr><tr>    <td>
+
+            <hr>   </tr><tr>
+            <td>
+<h1 id="price"></h1></td>
+        </tr><tr><td>
+<div id="panels"></div>
+            </td>  </tr><tr><td>
+    
+<div style="float:left;" >
+
+    <button  onclick="AddToStake( 0 );" >Add to stake under 33k</button>  |  
+<button  onclick="AddToStake( 1 );" >Add to stake 33k to 34k</button>  |  
+<button onclick="AddToStake( 2 );" >Add to stake 34k to 35k</button>  |  
+<button  onclick="AddToStake( 3 );" >Add to stake 35k to 36k</button>  |  
+<button  onclick="AddToStake( 4 );" >Add to stake 36k up </button><br><br>
+
+
+<button  onclick="RemoveStake( 0 );" >Remove stake under 32k</button>  |  
+<button  onclick="RemoveStake( 1 );" >Remove stake 33k to 34k</button>  |  
+<button onclick="RemoveStake( 2 );" >Remove stake 34k to 35k</button>  |  
+<button  onclick="RemoveStake( 3 );" >Remove stake 35k to 36k</button>  |  
+<button  onclick="RemoveStake( 4 );" >Remove stake 36k up </button>
+
+</div></td></tr><tr><td>
+
+ <div id="info" style="float:left;" >
+    <h2>Stake Trading, what's it about?</h2>
+    <p>It's a gamified staking rewards system. Staking against BTC price action is one example of how this can be used.</p>
+    <p>Another example is sports betting (stake against your team and be rewarded over the course of a season). I'm pretty sure anything you can bet on, I can setup stake trading to emulate the action.</p>
+    <p>It takes inspiration from Pool Together which is a rewards/savings scheme with no losing scenarios. The losing scenarios for stake trading wont be zero but can be configured.</p>
+    <p>I intend to mock up another system during this hackathon.</p>
+ </div></td></tr>
+</table>
+
+</body>
+
+</html>

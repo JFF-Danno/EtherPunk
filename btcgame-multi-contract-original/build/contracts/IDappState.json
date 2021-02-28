@@ -1,0 +1,545 @@
+{
+  "contractName": "IDappState",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getContractOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "increment",
+          "type": "uint256"
+        }
+      ],
+      "name": "incrementCounter",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCounter",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getContractOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getCounter\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"increment\",\"type\":\"uint256\"}],\"name\":\"incrementCounter\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{},\"notice\":\"*****************************************************************************************\"}},\"settings\":{\"compilationTarget\":{\"/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/interfaces/IDappState.sol\":\"IDappState\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/interfaces/IDappState.sol\":{\"keccak256\":\"0x33a64a03ac161bf3f9e998306cd29c9d2171ff8d50c99f388b4cf5dde3b358fa\",\"urls\":[\"bzz-raw://5e3fb85460c92e60f96a48a7d195013b302a0688fd91e583bd663bc3b023e2bf\",\"dweb:/ipfs/Qmf2sJLBPipKuVaYdKxNxaBNahSQeMkWmXQgvAue7ze5ky\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity  >=0.5.0;\npragma experimental ABIEncoderV2;\n\n/********************************************************************************************/\n/*  This contract is the interface for DappState.sol functions used in Dapp.sol             */\n/*  to enable DappState functions to be called from Dapp. You can restrict the functions    */\n/*  in DappState directly known to Dapp by limiting the definitions you include here.       */\n/*  It's OK to not use IDappState and Dapp, but if you do use them, it's highly recommended */\n/*  that you use the DappStarter \"Contract Access\" feature  block so you can limit which    */\n/*  contracts can call in to the DappState contract.                                        */\n/********************************************************************************************/\n\ninterface IDappState {\n    function getContractOwner() external view returns(address);     // Example READ function\n    function incrementCounter(uint256 increment) external;          // Example WRITE function\n    function getCounter() external view returns(uint256);           // Another example READ function\n}",
+  "sourcePath": "/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/interfaces/IDappState.sol",
+  "ast": {
+    "absolutePath": "/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/interfaces/IDappState.sol",
+    "exportedSymbols": {
+      "IDappState": [
+        1431
+      ]
+    },
+    "id": 1432,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1414,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:25:8"
+      },
+      {
+        "id": 1415,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "26:33:8"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "*****************************************************************************************",
+        "fullyImplemented": false,
+        "id": 1431,
+        "linearizedBaseContracts": [
+          1431
+        ],
+        "name": "IDappState",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 1420,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getContractOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1416,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "874:2:8"
+            },
+            "returnParameters": {
+              "id": 1419,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1418,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1420,
+                  "src": "899:7:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1417,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "899:7:8",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "898:9:8"
+            },
+            "scope": 1431,
+            "src": "849:59:8",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 1425,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "incrementCounter",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1423,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1422,
+                  "name": "increment",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1425,
+                  "src": "968:17:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1421,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "968:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "967:19:8"
+            },
+            "returnParameters": {
+              "id": 1424,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "995:0:8"
+            },
+            "scope": 1431,
+            "src": "942:54:8",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 1430,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getCounter",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1426,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1055:2:8"
+            },
+            "returnParameters": {
+              "id": 1429,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1428,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1430,
+                  "src": "1080:7:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1427,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1080:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1079:9:8"
+            },
+            "scope": 1431,
+            "src": "1036:53:8",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1432,
+        "src": "822:312:8"
+      }
+    ],
+    "src": "0:1134:8"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/interfaces/IDappState.sol",
+      "exportedSymbols": {
+        "IDappState": [
+          1431
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 1414,
+        "name": "PragmaDirective",
+        "src": "0:25:8"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 1415,
+        "name": "PragmaDirective",
+        "src": "26:33:8"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": "*****************************************************************************************",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            1431
+          ],
+          "name": "IDappState",
+          "scope": 1432
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getContractOwner",
+              "scope": 1431,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1416,
+                "name": "ParameterList",
+                "src": "874:2:8"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 1420,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1417,
+                        "name": "ElementaryTypeName",
+                        "src": "899:7:8"
+                      }
+                    ],
+                    "id": 1418,
+                    "name": "VariableDeclaration",
+                    "src": "899:7:8"
+                  }
+                ],
+                "id": 1419,
+                "name": "ParameterList",
+                "src": "898:9:8"
+              }
+            ],
+            "id": 1420,
+            "name": "FunctionDefinition",
+            "src": "849:59:8"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "incrementCounter",
+              "scope": 1431,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "increment",
+                      "scope": 1425,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1421,
+                        "name": "ElementaryTypeName",
+                        "src": "968:7:8"
+                      }
+                    ],
+                    "id": 1422,
+                    "name": "VariableDeclaration",
+                    "src": "968:17:8"
+                  }
+                ],
+                "id": 1423,
+                "name": "ParameterList",
+                "src": "967:19:8"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1424,
+                "name": "ParameterList",
+                "src": "995:0:8"
+              }
+            ],
+            "id": 1425,
+            "name": "FunctionDefinition",
+            "src": "942:54:8"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getCounter",
+              "scope": 1431,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1426,
+                "name": "ParameterList",
+                "src": "1055:2:8"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 1430,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1427,
+                        "name": "ElementaryTypeName",
+                        "src": "1080:7:8"
+                      }
+                    ],
+                    "id": 1428,
+                    "name": "VariableDeclaration",
+                    "src": "1080:7:8"
+                  }
+                ],
+                "id": 1429,
+                "name": "ParameterList",
+                "src": "1079:9:8"
+              }
+            ],
+            "id": 1430,
+            "name": "FunctionDefinition",
+            "src": "1036:53:8"
+          }
+        ],
+        "id": 1431,
+        "name": "ContractDefinition",
+        "src": "822:312:8"
+      }
+    ],
+    "id": 1432,
+    "name": "SourceUnit",
+    "src": "0:1134:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-01-30T01:54:18.740Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "*****************************************************************************************"
+  }
+}

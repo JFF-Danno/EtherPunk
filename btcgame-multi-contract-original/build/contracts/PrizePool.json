@@ -1,0 +1,935 @@
+{
+  "contractName": "PrizePool",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "payout",
+          "type": "uint256"
+        }
+      ],
+      "name": "PayoutPotCreated",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "addToPool",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPoolTotal",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "AddToPot",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"payout\",\"type\":\"uint256\"}],\"name\":\"PayoutPotCreated\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[],\"name\":\"AddToPot\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"addToPool\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getPoolTotal\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/PrizePool.sol\":\"PrizePool\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/PrizePool.sol\":{\"keccak256\":\"0xae160f9f279510cb5d6f23854f5a78f64eadbfab6d70c402f7d7440144ed2643\",\"urls\":[\"bzz-raw://d261d352f709eb021143d9365594aac27e607761667c06f32816b139d8d345e5\",\"dweb:/ipfs/QmSFjjvnuU2KFfQggtnpZFs63177CeijwKMopDURGiZujS\"]}},\"version\":1}",
+  "bytecode": "0x60806040526000805534801561001457600080fd5b5060fd806100236000396000f3fe60806040526004361060305760003560e01c80638ed1fff5146035578063c07401f014605d578063d867bef8146065575b600080fd5b348015604057600080fd5b506047606d565b6040518082815260200191505060405180910390f35b60636076565b005b606b6087565b005b60008054905090565b346000808282540192505081905550565b7f3fd806cb93db22637c097d0651e7c5cb13ae1fe0c0dc66f9e0ee2aaaafb6a09d670de0b6b3a76400006040518082815260200191505060405180910390a156fea265627a7a723158200408de97371991bc3fdcf49407e4ed60b3c7620923935280bdc900bc9770818064736f6c63430005110032",
+  "deployedBytecode": "0x60806040526004361060305760003560e01c80638ed1fff5146035578063c07401f014605d578063d867bef8146065575b600080fd5b348015604057600080fd5b506047606d565b6040518082815260200191505060405180910390f35b60636076565b005b606b6087565b005b60008054905090565b346000808282540192505081905550565b7f3fd806cb93db22637c097d0651e7c5cb13ae1fe0c0dc66f9e0ee2aaaafb6a09d670de0b6b3a76400006040518082815260200191505060405180910390a156fea265627a7a723158200408de97371991bc3fdcf49407e4ed60b3c7620923935280bdc900bc9770818064736f6c63430005110032",
+  "sourceMap": "34:371:7:-;;;84:1;64:21;;34:371;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:371:7;;;;;;;",
+  "deployedSourceMap": "34:371:7:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;177:86;;8:9:-1;5:2;;;30:1;27;20:12;5:2;177:86:7;;;:::i;:::-;;;;;;;;;;;;;;;;;;;92:79;;;:::i;:::-;;318:85;;;:::i;:::-;;177:86;222:7;247:9;;240:16;;177:86;:::o;92:79::-;155:9;142;;:22;;;;;;;;;;;92:79::o;318:85::-;369:27;387:7;369:27;;;;;;;;;;;;;;;;;;318:85::o",
+  "source": "pragma solidity >=0.4.22 <0.8.0;\n\ncontract PrizePool {\n    \n    uint256 totalPool = 0;\n\n    function addToPool() public payable\n    {\n        totalPool += msg.value;\n    }\n\n    function getPoolTotal() public view returns (uint256){\n        return totalPool;\n    }\n\n    event PayoutPotCreated( uint payout );\n    \n     function AddToPot() public payable {\n\n        emit PayoutPotCreated( 1 ether );\n    }\n}\n",
+  "sourcePath": "/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/PrizePool.sol",
+  "ast": {
+    "absolutePath": "/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/PrizePool.sol",
+    "exportedSymbols": {
+      "PrizePool": [
+        1412
+      ]
+    },
+    "id": 1413,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1379,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1412,
+        "linearizedBaseContracts": [
+          1412
+        ],
+        "name": "PrizePool",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1382,
+            "name": "totalPool",
+            "nodeType": "VariableDeclaration",
+            "scope": 1412,
+            "src": "64:21:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1380,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "64:7:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 1381,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "84:1:7",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1390,
+              "nodeType": "Block",
+              "src": "132:39:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1388,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1385,
+                      "name": "totalPool",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1382,
+                      "src": "142:9:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1386,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3228,
+                        "src": "155:3:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 1387,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "value",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "155:9:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "142:22:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1389,
+                  "nodeType": "ExpressionStatement",
+                  "src": "142:22:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1391,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addToPool",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1383,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "110:2:7"
+            },
+            "returnParameters": {
+              "id": 1384,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "132:0:7"
+            },
+            "scope": 1412,
+            "src": "92:79:7",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1398,
+              "nodeType": "Block",
+              "src": "230:33:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1396,
+                    "name": "totalPool",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1382,
+                    "src": "247:9:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1395,
+                  "id": 1397,
+                  "nodeType": "Return",
+                  "src": "240:16:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1399,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPoolTotal",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1392,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "198:2:7"
+            },
+            "returnParameters": {
+              "id": 1395,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1394,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1399,
+                  "src": "222:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1393,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "222:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "221:9:7"
+            },
+            "scope": 1412,
+            "src": "177:86:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1403,
+            "name": "PayoutPotCreated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1402,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1401,
+                  "indexed": false,
+                  "name": "payout",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1403,
+                  "src": "293:11:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1400,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "293:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "291:15:7"
+            },
+            "src": "269:38:7"
+          },
+          {
+            "body": {
+              "id": 1410,
+              "nodeType": "Block",
+              "src": "353:50:7",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 1407,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "387:7:7",
+                        "subdenomination": "ether",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000"
+                        },
+                        "value": "1"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000"
+                        }
+                      ],
+                      "id": 1406,
+                      "name": "PayoutPotCreated",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1403,
+                      "src": "369:16:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 1408,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "369:27:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1409,
+                  "nodeType": "EmitStatement",
+                  "src": "364:32:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1411,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "AddToPot",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1404,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "335:2:7"
+            },
+            "returnParameters": {
+              "id": 1405,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "353:0:7"
+            },
+            "scope": 1412,
+            "src": "318:85:7",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1413,
+        "src": "34:371:7"
+      }
+    ],
+    "src": "0:406:7"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/PrizePool.sol",
+      "exportedSymbols": {
+        "PrizePool": [
+          1412
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.8",
+            ".0"
+          ]
+        },
+        "id": 1379,
+        "name": "PragmaDirective",
+        "src": "0:32:7"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1412
+          ],
+          "name": "PrizePool",
+          "scope": 1413
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "totalPool",
+              "scope": 1412,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 1380,
+                "name": "ElementaryTypeName",
+                "src": "64:7:7"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "30",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 0",
+                  "value": "0"
+                },
+                "id": 1381,
+                "name": "Literal",
+                "src": "84:1:7"
+              }
+            ],
+            "id": 1382,
+            "name": "VariableDeclaration",
+            "src": "64:21:7"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addToPool",
+              "scope": 1412,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1383,
+                "name": "ParameterList",
+                "src": "110:2:7"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1384,
+                "name": "ParameterList",
+                "src": "132:0:7"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "+=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1382,
+                              "type": "uint256",
+                              "value": "totalPool"
+                            },
+                            "id": 1385,
+                            "name": "Identifier",
+                            "src": "142:9:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "value",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 3228,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 1386,
+                                "name": "Identifier",
+                                "src": "155:3:7"
+                              }
+                            ],
+                            "id": 1387,
+                            "name": "MemberAccess",
+                            "src": "155:9:7"
+                          }
+                        ],
+                        "id": 1388,
+                        "name": "Assignment",
+                        "src": "142:22:7"
+                      }
+                    ],
+                    "id": 1389,
+                    "name": "ExpressionStatement",
+                    "src": "142:22:7"
+                  }
+                ],
+                "id": 1390,
+                "name": "Block",
+                "src": "132:39:7"
+              }
+            ],
+            "id": 1391,
+            "name": "FunctionDefinition",
+            "src": "92:79:7"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getPoolTotal",
+              "scope": 1412,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1392,
+                "name": "ParameterList",
+                "src": "198:2:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 1399,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1393,
+                        "name": "ElementaryTypeName",
+                        "src": "222:7:7"
+                      }
+                    ],
+                    "id": 1394,
+                    "name": "VariableDeclaration",
+                    "src": "222:7:7"
+                  }
+                ],
+                "id": 1395,
+                "name": "ParameterList",
+                "src": "221:9:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1395
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 1382,
+                          "type": "uint256",
+                          "value": "totalPool"
+                        },
+                        "id": 1396,
+                        "name": "Identifier",
+                        "src": "247:9:7"
+                      }
+                    ],
+                    "id": 1397,
+                    "name": "Return",
+                    "src": "240:16:7"
+                  }
+                ],
+                "id": 1398,
+                "name": "Block",
+                "src": "230:33:7"
+              }
+            ],
+            "id": 1399,
+            "name": "FunctionDefinition",
+            "src": "177:86:7"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "PayoutPotCreated"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "payout",
+                      "scope": 1403,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 1400,
+                        "name": "ElementaryTypeName",
+                        "src": "293:4:7"
+                      }
+                    ],
+                    "id": 1401,
+                    "name": "VariableDeclaration",
+                    "src": "293:11:7"
+                  }
+                ],
+                "id": 1402,
+                "name": "ParameterList",
+                "src": "291:15:7"
+              }
+            ],
+            "id": 1403,
+            "name": "EventDefinition",
+            "src": "269:38:7"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "AddToPot",
+              "scope": 1412,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1404,
+                "name": "ParameterList",
+                "src": "335:2:7"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1405,
+                "name": "ParameterList",
+                "src": "353:0:7"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                                  "typeString": "int_const 1000000000000000000"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1403,
+                              "type": "function (uint256)",
+                              "value": "PayoutPotCreated"
+                            },
+                            "id": 1406,
+                            "name": "Identifier",
+                            "src": "369:16:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "31",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": "ether",
+                              "token": "number",
+                              "type": "int_const 1000000000000000000",
+                              "value": "1"
+                            },
+                            "id": 1407,
+                            "name": "Literal",
+                            "src": "387:7:7"
+                          }
+                        ],
+                        "id": 1408,
+                        "name": "FunctionCall",
+                        "src": "369:27:7"
+                      }
+                    ],
+                    "id": 1409,
+                    "name": "EmitStatement",
+                    "src": "364:32:7"
+                  }
+                ],
+                "id": 1410,
+                "name": "Block",
+                "src": "353:50:7"
+              }
+            ],
+            "id": 1411,
+            "name": "FunctionDefinition",
+            "src": "318:85:7"
+          }
+        ],
+        "id": 1412,
+        "name": "ContractDefinition",
+        "src": "34:371:7"
+      }
+    ],
+    "id": 1413,
+    "name": "SourceUnit",
+    "src": "0:406:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-01-30T01:54:18.739Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

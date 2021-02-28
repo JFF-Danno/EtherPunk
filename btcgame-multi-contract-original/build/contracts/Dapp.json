@@ -1,0 +1,1465 @@
+{
+  "contractName": "Dapp",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "dappStateContract",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getStateContractOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "increment",
+          "type": "uint256"
+        }
+      ],
+      "name": "incrementStateCounter",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getStateCounter",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"dappStateContract\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"getStateContractOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getStateCounter\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"increment\",\"type\":\"uint256\"}],\"name\":\"incrementStateCounter\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"getStateContractOwner()\":{\"details\":\"Example function to demonstrate cross-contract READ call    \"},\"getStateCounter()\":{\"details\":\"Another example function to demonstrate cross-contract WRITE call    \"},\"incrementStateCounter(uint256)\":{\"details\":\"Example function to demonstrate cross-contract WRITE call    \"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/Dapp.sol\":\"Dapp\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/Dapp.sol\":{\"keccak256\":\"0x9dbc5e23735d1547baa03274db068d792259411437e049e3296fb15cd9232121\",\"urls\":[\"bzz-raw://93d36f6595077bdb1f5417cdeb918d24de31ff9ba47acce795652e57da5fea35\",\"dweb:/ipfs/QmdvnUpyc4wcnrZMXam5dXgzhcGDXgFqJVMuLExMHxp37e\"]},\"/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/DappLib.sol\":{\"keccak256\":\"0x806f75b73d7f21823a23b6edf08578e34c921ca6cf92fcf609dcc981a8ec3247\",\"urls\":[\"bzz-raw://e11cc62bf6d9144c75d9c02993ea2fcc3c5253c2be87a0d1c1ef1926cf947a54\",\"dweb:/ipfs/QmatbqDykceATdmuzQsPDmhmNrAf8Zz3PWb7sBAbQnxUCA\"]},\"/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/interfaces/IDappState.sol\":{\"keccak256\":\"0x33a64a03ac161bf3f9e998306cd29c9d2171ff8d50c99f388b4cf5dde3b358fa\",\"urls\":[\"bzz-raw://5e3fb85460c92e60f96a48a7d195013b302a0688fd91e583bd663bc3b023e2bf\",\"dweb:/ipfs/Qmf2sJLBPipKuVaYdKxNxaBNahSQeMkWmXQgvAue7ze5ky\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516105423803806105428339818101604052610032919081019061008d565b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506100ff565b600081519050610087816100e8565b92915050565b60006020828403121561009f57600080fd5b60006100ad84828501610078565b91505092915050565b60006100c1826100c8565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6100f1816100b6565b81146100fc57600080fd5b50565b6104348061010e6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063111d4a0714610046578063a9bd9fc514610062578063cde03c7814610080575b600080fd5b610060600480360361005b91908101906102e1565b61009e565b005b61006a61012d565b604051610077919061036c565b60405180910390f35b6100886101d3565b6040516100959190610351565b60405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636abbb3b4826040518263ffffffff1660e01b81526004016100f8919061036c565b600060405180830381600087803b15801561011257600080fd5b505af1158015610126573d6000803e3d6000fd5b5050505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16638ada066e6040518163ffffffff1660e01b815260040160206040518083038186803b15801561019657600080fd5b505afa1580156101aa573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052506101ce919081019061030a565b905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663442890d56040518163ffffffff1660e01b815260040160206040518083038186803b15801561023c57600080fd5b505afa158015610250573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525061027491908101906102b8565b905090565b600081519050610288816103c3565b92915050565b60008135905061029d816103da565b92915050565b6000815190506102b2816103da565b92915050565b6000602082840312156102ca57600080fd5b60006102d884828501610279565b91505092915050565b6000602082840312156102f357600080fd5b60006103018482850161028e565b91505092915050565b60006020828403121561031c57600080fd5b600061032a848285016102a3565b91505092915050565b61033c81610387565b82525050565b61034b816103b9565b82525050565b60006020820190506103666000830184610333565b92915050565b60006020820190506103816000830184610342565b92915050565b600061039282610399565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6103cc81610387565b81146103d757600080fd5b50565b6103e3816103b9565b81146103ee57600080fd5b5056fea365627a7a72315820dbfeb1d72ab8396a441d2a78e5a6ae895375eafcdd277796e68b22ecf9ed3d166c6578706572696d656e74616cf564736f6c63430005110040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063111d4a0714610046578063a9bd9fc514610062578063cde03c7814610080575b600080fd5b610060600480360361005b91908101906102e1565b61009e565b005b61006a61012d565b604051610077919061036c565b60405180910390f35b6100886101d3565b6040516100959190610351565b60405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636abbb3b4826040518263ffffffff1660e01b81526004016100f8919061036c565b600060405180830381600087803b15801561011257600080fd5b505af1158015610126573d6000803e3d6000fd5b5050505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16638ada066e6040518163ffffffff1660e01b815260040160206040518083038186803b15801561019657600080fd5b505afa1580156101aa573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052506101ce919081019061030a565b905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663442890d56040518163ffffffff1660e01b815260040160206040518083038186803b15801561023c57600080fd5b505afa158015610250573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525061027491908101906102b8565b905090565b600081519050610288816103c3565b92915050565b60008135905061029d816103da565b92915050565b6000815190506102b2816103da565b92915050565b6000602082840312156102ca57600080fd5b60006102d884828501610279565b91505092915050565b6000602082840312156102f357600080fd5b60006103018482850161028e565b91505092915050565b60006020828403121561031c57600080fd5b600061032a848285016102a3565b91505092915050565b61033c81610387565b82525050565b61034b816103b9565b82525050565b60006020820190506103666000830184610333565b92915050565b60006020820190506103816000830184610342565b92915050565b600061039282610399565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6103cc81610387565b81146103d757600080fd5b50565b6103e3816103b9565b81146103ee57600080fd5b5056fea365627a7a72315820dbfeb1d72ab8396a441d2a78e5a6ae895375eafcdd277796e68b22ecf9ed3d166c6578706572696d656e74616cf564736f6c63430005110040",
+  "sourceMap": "1179:1553:1:-;;;1629:177;8:9:-1;5:2;;;30:1;27;20:12;5:2;1629:177:1;;;;;;;;;;;;;;;;;;;;;;;;1781:17;1762:5;;:37;;;;;;;;;;;;;;;;;;1629:177;1179:1553;;5:134:-1;;89:6;83:13;74:22;;101:33;128:5;101:33;;;68:71;;;;;146:263;;261:2;249:9;240:7;236:23;232:32;229:2;;;277:1;274;267:12;229:2;312:1;329:64;385:7;376:6;365:9;361:22;329:64;;;319:74;;291:108;223:186;;;;;416:91;;478:24;496:5;478:24;;;467:35;;461:46;;;;514:121;;587:42;580:5;576:54;565:65;;559:76;;;;642:117;711:24;729:5;711:24;;;704:5;701:35;691:2;;750:1;747;740:12;691:2;685:74;;1179:1553:1;;;;;;;",
+  "deployedSourceMap": "1179:1553:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1179:1553:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2197:239;;;;;;;;;;;;;;;;:::i;:::-;;2541:188;;;:::i;:::-;;;;;;;;;;;;;;;;1901:200;;;:::i;:::-;;;;;;;;;;;;;;;;2197:239;2396:5;;;;;;;;;;;:22;;;2419:9;2396:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2396:33:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2396:33:1;;;;2197:239;:::o;2541:188::-;2674:7;2704:5;;;;;;;;;;;:16;;;:18;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2704:18:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2704:18:1;;;;;;;101:4:-1;97:9;90:4;84;80:15;76:31;69:5;65:43;126:6;120:4;113:20;0:138;2704:18:1;;;;;;;;;2697:25;;2541:188;:::o;1901:200::-;2040:7;2070:5;;;;;;;;;;;:22;;;:24;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2070:24:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2070:24:1;;;;;;;101:4:-1;97:9;90:4;84;80:15;76:31;69:5;65:43;126:6;120:4;113:20;0:138;2070:24:1;;;;;;;;;2063:31;;1901:200;:::o;5:134:-1:-;;89:6;83:13;74:22;;101:33;128:5;101:33;;;68:71;;;;;146:130;;226:6;213:20;204:29;;238:33;265:5;238:33;;;198:78;;;;;283:134;;367:6;361:13;352:22;;379:33;406:5;379:33;;;346:71;;;;;424:263;;539:2;527:9;518:7;514:23;510:32;507:2;;;555:1;552;545:12;507:2;590:1;607:64;663:7;654:6;643:9;639:22;607:64;;;597:74;;569:108;501:186;;;;;694:241;;798:2;786:9;777:7;773:23;769:32;766:2;;;814:1;811;804:12;766:2;849:1;866:53;911:7;902:6;891:9;887:22;866:53;;;856:63;;828:97;760:175;;;;;942:263;;1057:2;1045:9;1036:7;1032:23;1028:32;1025:2;;;1073:1;1070;1063:12;1025:2;1108:1;1125:64;1181:7;1172:6;1161:9;1157:22;1125:64;;;1115:74;;1087:108;1019:186;;;;;1212:113;1295:24;1313:5;1295:24;;;1290:3;1283:37;1277:48;;;1332:113;1415:24;1433:5;1415:24;;;1410:3;1403:37;1397:48;;;1452:213;;1570:2;1559:9;1555:18;1547:26;;1584:71;1652:1;1641:9;1637:17;1628:6;1584:71;;;1541:124;;;;;1672:213;;1790:2;1779:9;1775:18;1767:26;;1804:71;1872:1;1861:9;1857:17;1848:6;1804:71;;;1761:124;;;;;1892:91;;1954:24;1972:5;1954:24;;;1943:35;;1937:46;;;;1990:121;;2063:42;2056:5;2052:54;2041:65;;2035:76;;;;2118:72;;2180:5;2169:16;;2163:27;;;;2197:117;2266:24;2284:5;2266:24;;;2259:5;2256:35;2246:2;;2305:1;2302;2295:12;2246:2;2240:74;;2321:117;2390:24;2408:5;2390:24;;;2383:5;2380:35;2370:2;;2429:1;2426;2419:12;2370:2;2364:74;",
+  "source": "pragma solidity  >=0.5.0;\npragma experimental ABIEncoderV2;\n\nimport \"./interfaces/IDappState.sol\";\nimport \"./DappLib.sol\";\n\n    /*\n\n    VERY IMPORTANT SECURITY NOTE:\n\n    You will want to restrict some of your state contract functions so only authorized\n    contracts can call them. This can be achieved in four steps:\n\n    1) Include the \"Access Control: Contract Access\" feature block when creating your project.\n       This adds all the functionality to manage white-listing of external contracts in your\n       state contract.\n\n    2) Add the \"requireContractAuthorized\" function modifiers to those state contract functions\n       that should be restricted.\n\n    3) Deploy the contract that will be calling into the state contract (like this one, for example).\n    \n    4) Call the \"authorizeContract()\" function in the state contract with the deployed address of the\n       calling contract. This adds the calling contract to a white-list. Thereafter, any calls to any\n       function in the state contract that use the \"requireContractAuthorized\" function modifier will\n       succeed only if the calling contract (or any caller for that matter) is white-listed.\n\n    */\n\n\ncontract Dapp {\n    // Allow DappLib(SafeMath) functions to be called for all uint256 types\n    // (similar to \"prototype\" in Javascript)\n    using DappLib for uint256;\n\n    IDappState state;\n\n    // During deployment, the address of the contract that contains data (or \"state\")\n    // is provided as a constructor argument. The \"state\" variable can then call any\n    // function in the state contract that it is aware of (by way of IDappState).\n    constructor \n                (\n                    address dappStateContract \n                )\n                public\n    {\n        state = IDappState(dappStateContract);\n    }\n\n    /**\n    * @dev Example function to demonstrate cross-contract READ call\n    *\n    */\n    function getStateContractOwner()\n                            external\n                            view\n                            returns(address)\n    {\n        return state.getContractOwner();\n    }\n\n    /**\n    * @dev Example function to demonstrate cross-contract WRITE call\n    *\n    */\n    function incrementStateCounter\n                            (\n                                uint256 increment\n                            )\n                            external\n    {\n        return state.incrementCounter(increment);\n    }\n\n\n    /**\n    * @dev Another example function to demonstrate cross-contract WRITE call\n    *\n    */\n    function getStateCounter()\n                            external\n                            view\n                            returns(uint256)\n    {\n        return state.getCounter();\n    }\n\n} \n",
+  "sourcePath": "/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/Dapp.sol",
+  "ast": {
+    "absolutePath": "/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/Dapp.sol",
+    "exportedSymbols": {
+      "Dapp": [
+        181
+      ]
+    },
+    "id": 182,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 129,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:25:1"
+      },
+      {
+        "id": 130,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "26:33:1"
+      },
+      {
+        "absolutePath": "/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/interfaces/IDappState.sol",
+        "file": "./interfaces/IDappState.sol",
+        "id": 131,
+        "nodeType": "ImportDirective",
+        "scope": 182,
+        "sourceUnit": 1432,
+        "src": "61:37:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/DappLib.sol",
+        "file": "./DappLib.sol",
+        "id": 132,
+        "nodeType": "ImportDirective",
+        "scope": 182,
+        "sourceUnit": 384,
+        "src": "99:23:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 181,
+        "linearizedBaseContracts": [
+          181
+        ],
+        "name": "Dapp",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 135,
+            "libraryName": {
+              "contractScope": null,
+              "id": 133,
+              "name": "DappLib",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 383,
+              "src": "1327:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DappLib_$383",
+                "typeString": "library DappLib"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "1321:26:1",
+            "typeName": {
+              "id": 134,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1339:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 137,
+            "name": "state",
+            "nodeType": "VariableDeclaration",
+            "scope": 181,
+            "src": "1353:16:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IDappState_$1431",
+              "typeString": "contract IDappState"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 136,
+              "name": "IDappState",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1431,
+              "src": "1353:10:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IDappState_$1431",
+                "typeString": "contract IDappState"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 148,
+              "nodeType": "Block",
+              "src": "1752:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 146,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 142,
+                      "name": "state",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 137,
+                      "src": "1762:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IDappState_$1431",
+                        "typeString": "contract IDappState"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 144,
+                          "name": "dappStateContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 139,
+                          "src": "1781:17:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 143,
+                        "name": "IDappState",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1431,
+                        "src": "1770:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IDappState_$1431_$",
+                          "typeString": "type(contract IDappState)"
+                        }
+                      },
+                      "id": 145,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1770:29:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IDappState_$1431",
+                        "typeString": "contract IDappState"
+                      }
+                    },
+                    "src": "1762:37:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IDappState_$1431",
+                      "typeString": "contract IDappState"
+                    }
+                  },
+                  "id": 147,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1762:37:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 149,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 140,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 139,
+                  "name": "dappStateContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 149,
+                  "src": "1680:25:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 138,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1680:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1658:66:1"
+            },
+            "returnParameters": {
+              "id": 141,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1752:0:1"
+            },
+            "scope": 181,
+            "src": "1629:177:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 158,
+              "nodeType": "Block",
+              "src": "2053:48:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 154,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 137,
+                        "src": "2070:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IDappState_$1431",
+                          "typeString": "contract IDappState"
+                        }
+                      },
+                      "id": 155,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getContractOwner",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1420,
+                      "src": "2070:22:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_address_$",
+                        "typeString": "function () view external returns (address)"
+                      }
+                    },
+                    "id": 156,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2070:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 153,
+                  "id": 157,
+                  "nodeType": "Return",
+                  "src": "2063:31:1"
+                }
+              ]
+            },
+            "documentation": "@dev Example function to demonstrate cross-contract READ call\n    ",
+            "id": 159,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getStateContractOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 150,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1931:2:1"
+            },
+            "returnParameters": {
+              "id": 153,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 152,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 159,
+                  "src": "2040:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 151,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2040:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2039:9:1"
+            },
+            "scope": 181,
+            "src": "1901:200:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 169,
+              "nodeType": "Block",
+              "src": "2379:57:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 166,
+                        "name": "increment",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 161,
+                        "src": "2419:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 164,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 137,
+                        "src": "2396:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IDappState_$1431",
+                          "typeString": "contract IDappState"
+                        }
+                      },
+                      "id": 165,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "incrementCounter",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1425,
+                      "src": "2396:22:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256) external"
+                      }
+                    },
+                    "id": 167,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2396:33:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 163,
+                  "id": 168,
+                  "nodeType": "Return",
+                  "src": "2389:40:1"
+                }
+              ]
+            },
+            "documentation": "@dev Example function to demonstrate cross-contract WRITE call\n    ",
+            "id": 170,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "incrementStateCounter",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 162,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 161,
+                  "name": "increment",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 170,
+                  "src": "2290:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 160,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2290:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2256:81:1"
+            },
+            "returnParameters": {
+              "id": 163,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2379:0:1"
+            },
+            "scope": 181,
+            "src": "2197:239:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 179,
+              "nodeType": "Block",
+              "src": "2687:42:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 175,
+                        "name": "state",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 137,
+                        "src": "2704:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IDappState_$1431",
+                          "typeString": "contract IDappState"
+                        }
+                      },
+                      "id": 176,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getCounter",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1430,
+                      "src": "2704:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                        "typeString": "function () view external returns (uint256)"
+                      }
+                    },
+                    "id": 177,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2704:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 174,
+                  "id": 178,
+                  "nodeType": "Return",
+                  "src": "2697:25:1"
+                }
+              ]
+            },
+            "documentation": "@dev Another example function to demonstrate cross-contract WRITE call\n    ",
+            "id": 180,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getStateCounter",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 171,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2565:2:1"
+            },
+            "returnParameters": {
+              "id": 174,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 173,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 180,
+                  "src": "2674:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 172,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2674:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2673:9:1"
+            },
+            "scope": 181,
+            "src": "2541:188:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 182,
+        "src": "1179:1553:1"
+      }
+    ],
+    "src": "0:2734:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/Dapp.sol",
+      "exportedSymbols": {
+        "Dapp": [
+          181
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 129,
+        "name": "PragmaDirective",
+        "src": "0:25:1"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 130,
+        "name": "PragmaDirective",
+        "src": "26:33:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1432,
+          "absolutePath": "/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/interfaces/IDappState.sol",
+          "file": "./interfaces/IDappState.sol",
+          "scope": 182,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 131,
+        "name": "ImportDirective",
+        "src": "61:37:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 384,
+          "absolutePath": "/home/danielo/Matic/upbeat-lukebul/packages/dapplib/contracts/DappLib.sol",
+          "file": "./DappLib.sol",
+          "scope": 182,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 132,
+        "name": "ImportDirective",
+        "src": "99:23:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            181
+          ],
+          "name": "Dapp",
+          "scope": 182
+        },
+        "children": [
+          {
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "DappLib",
+                  "referencedDeclaration": 383,
+                  "type": "library DappLib"
+                },
+                "id": 133,
+                "name": "UserDefinedTypeName",
+                "src": "1327:7:1"
+              },
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 134,
+                "name": "ElementaryTypeName",
+                "src": "1339:7:1"
+              }
+            ],
+            "id": 135,
+            "name": "UsingForDirective",
+            "src": "1321:26:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "state",
+              "scope": 181,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract IDappState",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "IDappState",
+                  "referencedDeclaration": 1431,
+                  "type": "contract IDappState"
+                },
+                "id": 136,
+                "name": "UserDefinedTypeName",
+                "src": "1353:10:1"
+              }
+            ],
+            "id": 137,
+            "name": "VariableDeclaration",
+            "src": "1353:16:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 181,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "dappStateContract",
+                      "scope": 149,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 138,
+                        "name": "ElementaryTypeName",
+                        "src": "1680:7:1"
+                      }
+                    ],
+                    "id": 139,
+                    "name": "VariableDeclaration",
+                    "src": "1680:25:1"
+                  }
+                ],
+                "id": 140,
+                "name": "ParameterList",
+                "src": "1658:66:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 141,
+                "name": "ParameterList",
+                "src": "1752:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract IDappState"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 137,
+                              "type": "contract IDappState",
+                              "value": "state"
+                            },
+                            "id": 142,
+                            "name": "Identifier",
+                            "src": "1762:5:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "contract IDappState",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_address",
+                                      "typeString": "address"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1431,
+                                  "type": "type(contract IDappState)",
+                                  "value": "IDappState"
+                                },
+                                "id": 143,
+                                "name": "Identifier",
+                                "src": "1770:10:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 139,
+                                  "type": "address",
+                                  "value": "dappStateContract"
+                                },
+                                "id": 144,
+                                "name": "Identifier",
+                                "src": "1781:17:1"
+                              }
+                            ],
+                            "id": 145,
+                            "name": "FunctionCall",
+                            "src": "1770:29:1"
+                          }
+                        ],
+                        "id": 146,
+                        "name": "Assignment",
+                        "src": "1762:37:1"
+                      }
+                    ],
+                    "id": 147,
+                    "name": "ExpressionStatement",
+                    "src": "1762:37:1"
+                  }
+                ],
+                "id": 148,
+                "name": "Block",
+                "src": "1752:54:1"
+              }
+            ],
+            "id": 149,
+            "name": "FunctionDefinition",
+            "src": "1629:177:1"
+          },
+          {
+            "attributes": {
+              "documentation": "@dev Example function to demonstrate cross-contract READ call\n    ",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getStateContractOwner",
+              "scope": 181,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 150,
+                "name": "ParameterList",
+                "src": "1931:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 159,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 151,
+                        "name": "ElementaryTypeName",
+                        "src": "2040:7:1"
+                      }
+                    ],
+                    "id": 152,
+                    "name": "VariableDeclaration",
+                    "src": "2040:7:1"
+                  }
+                ],
+                "id": 153,
+                "name": "ParameterList",
+                "src": "2039:9:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 153
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "address",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "getContractOwner",
+                              "referencedDeclaration": 1420,
+                              "type": "function () view external returns (address)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 137,
+                                  "type": "contract IDappState",
+                                  "value": "state"
+                                },
+                                "id": 154,
+                                "name": "Identifier",
+                                "src": "2070:5:1"
+                              }
+                            ],
+                            "id": 155,
+                            "name": "MemberAccess",
+                            "src": "2070:22:1"
+                          }
+                        ],
+                        "id": 156,
+                        "name": "FunctionCall",
+                        "src": "2070:24:1"
+                      }
+                    ],
+                    "id": 157,
+                    "name": "Return",
+                    "src": "2063:31:1"
+                  }
+                ],
+                "id": 158,
+                "name": "Block",
+                "src": "2053:48:1"
+              }
+            ],
+            "id": 159,
+            "name": "FunctionDefinition",
+            "src": "1901:200:1"
+          },
+          {
+            "attributes": {
+              "documentation": "@dev Example function to demonstrate cross-contract WRITE call\n    ",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "incrementStateCounter",
+              "scope": 181,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "increment",
+                      "scope": 170,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 160,
+                        "name": "ElementaryTypeName",
+                        "src": "2290:7:1"
+                      }
+                    ],
+                    "id": 161,
+                    "name": "VariableDeclaration",
+                    "src": "2290:17:1"
+                  }
+                ],
+                "id": 162,
+                "name": "ParameterList",
+                "src": "2256:81:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 163,
+                "name": "ParameterList",
+                "src": "2379:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 163
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "incrementCounter",
+                              "referencedDeclaration": 1425,
+                              "type": "function (uint256) external"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 137,
+                                  "type": "contract IDappState",
+                                  "value": "state"
+                                },
+                                "id": 164,
+                                "name": "Identifier",
+                                "src": "2396:5:1"
+                              }
+                            ],
+                            "id": 165,
+                            "name": "MemberAccess",
+                            "src": "2396:22:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 161,
+                              "type": "uint256",
+                              "value": "increment"
+                            },
+                            "id": 166,
+                            "name": "Identifier",
+                            "src": "2419:9:1"
+                          }
+                        ],
+                        "id": 167,
+                        "name": "FunctionCall",
+                        "src": "2396:33:1"
+                      }
+                    ],
+                    "id": 168,
+                    "name": "Return",
+                    "src": "2389:40:1"
+                  }
+                ],
+                "id": 169,
+                "name": "Block",
+                "src": "2379:57:1"
+              }
+            ],
+            "id": 170,
+            "name": "FunctionDefinition",
+            "src": "2197:239:1"
+          },
+          {
+            "attributes": {
+              "documentation": "@dev Another example function to demonstrate cross-contract WRITE call\n    ",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getStateCounter",
+              "scope": 181,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 171,
+                "name": "ParameterList",
+                "src": "2565:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 180,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 172,
+                        "name": "ElementaryTypeName",
+                        "src": "2674:7:1"
+                      }
+                    ],
+                    "id": 173,
+                    "name": "VariableDeclaration",
+                    "src": "2674:7:1"
+                  }
+                ],
+                "id": 174,
+                "name": "ParameterList",
+                "src": "2673:9:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 174
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "getCounter",
+                              "referencedDeclaration": 1430,
+                              "type": "function () view external returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 137,
+                                  "type": "contract IDappState",
+                                  "value": "state"
+                                },
+                                "id": 175,
+                                "name": "Identifier",
+                                "src": "2704:5:1"
+                              }
+                            ],
+                            "id": 176,
+                            "name": "MemberAccess",
+                            "src": "2704:16:1"
+                          }
+                        ],
+                        "id": 177,
+                        "name": "FunctionCall",
+                        "src": "2704:18:1"
+                      }
+                    ],
+                    "id": 178,
+                    "name": "Return",
+                    "src": "2697:25:1"
+                  }
+                ],
+                "id": 179,
+                "name": "Block",
+                "src": "2687:42:1"
+              }
+            ],
+            "id": 180,
+            "name": "FunctionDefinition",
+            "src": "2541:188:1"
+          }
+        ],
+        "id": 181,
+        "name": "ContractDefinition",
+        "src": "1179:1553:1"
+      }
+    ],
+    "id": 182,
+    "name": "SourceUnit",
+    "src": "0:2734:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {
+    "80001": {
+      "events": {},
+      "links": {},
+      "address": "0x81cD41aAf0d65120De52f58e105C015a44dccC6A",
+      "transactionHash": "0xd3cfc411c6641708c17b5ce530850da5193a2ebea9b7c4ba5b70a6b16732129f"
+    }
+  },
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-02-19T04:54:45.041Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {
+      "getStateContractOwner()": {
+        "details": "Example function to demonstrate cross-contract READ call    "
+      },
+      "getStateCounter()": {
+        "details": "Another example function to demonstrate cross-contract WRITE call    "
+      },
+      "incrementStateCounter(uint256)": {
+        "details": "Example function to demonstrate cross-contract WRITE call    "
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
